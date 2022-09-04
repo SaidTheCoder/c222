@@ -8,7 +8,7 @@ app.use(express.json())
 const { v4: uuidv4 } = require("uuid");
 
 const io = require("socket.io")(server, {
-    cors: {
+    cors: { 
         origin: '*'
     }
 });
@@ -44,7 +44,7 @@ app.post("/send-mail", (req, res) => {
     const to = req.body.to;
     const url = req.body.url;
     const mailData = {
-        from: "apoorv.goyal@whitehatjr.com",
+        from: "rravshanbek@gmail.com",
         to: to,
         subject: "Join the video chat with me!",
         html: `<p>Hey there,</p><p>Come and join me for a video chat here - ${url}</p>`
